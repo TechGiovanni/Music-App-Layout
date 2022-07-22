@@ -6,7 +6,6 @@ body {
 body {
 	display: flex;
 	flex-direction: column;
-	background-color: #fff;
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 	color: #222;
@@ -35,6 +34,7 @@ aside i.fa {
 	display: flex;
 	flex: 1 0 auto;
 	flex-direction: column;
+	position: relative;
 }
 
 .billboard-img {
@@ -62,6 +62,10 @@ aside i.fa {
 	padding: 0 0.7em;
 	font-weight: 300;
 }
+li:nth-child(2n) {
+	background-color: #f4f4f4;
+}
+
 .catty-music div:nth-child(1) p:first-child {
 	font-size: 1.8em;
 	margin: 0 0 10px;
@@ -72,35 +76,56 @@ aside i.fa {
 }
 
 .music-head {
-	flex: 0 0 250px;
+	flex: 0 0 260px;
 	display: flex;
 	padding: 40px;
-	background-color: #4e4e4e;
+	background-color: #3a3a3a73;
 }
+
+/* .ariana {
+	position: absolute;
+	top: 0;
+	z-index: -2;
+	background-position: center;
+	background: url(../img/Ariana-Grande.png) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 42%;
+} */
 
 .music-list {
 	flex: 1 0 auto;
 	list-style-type: none;
-	padding: 5px 10px 0px;
+	background-color: #fff;
+	padding: 0px 10px 0px;
 }
 
 /* To make the list os Artist Scrollable  */
 ul {
-	height: 200px;
+	height: 70px;
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: scroll;
 }
 
+music-list.ul {
+	background-color: #fff;
+}
+
 li {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	padding: 0 20px;
-	min-height: 50px;
+	min-height: 80px;
 }
 li p {
 	flex: 0 0 25%;
 }
-li span.catty-cloud {
+li span.explore-cloud {
 	border: 1px solid #000;
 	font-size: 0.6em;
 	padding: 3px;
@@ -113,20 +138,25 @@ footer {
 	padding: 0 20px;
 	color: #fff;
 	background-color: rgba(61, 100, 158);
-	margin-top: auto;
+	width: 130&;
 }
+
 .img-footer {
 	display: flex;
 	gap: 1em;
 }
 .billboard-img2 {
-	width: 100px;
+	max-width: 100px;
+}
+li.footer-list {
+	background-color: rgba(61, 100, 158);
 }
 
 .footer-icons {
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
+	background-color: rgba(61, 100, 158);
 }
 
 .footer-controls {
@@ -134,4 +164,68 @@ footer {
 	justify-content: center;
 	align-items: center;
 	font-size: 1.5rem;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	gap: 1em;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 480px) {
+	aside {
+		display: none;
+	}
+	.music-head {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2.2em;
+	}
+
+	.catty-music {
+		display: flex;
+		align-items: center;
+		justify-self: center;
+		padding-left: 0;
+	}
+	.catty-music div:nth-child(1) p:first-child {
+		font-size: 1.5em;
+		margin: 0 0 10px;
+	}
+
+	.catty-music div p:nth-child(2) {
+		display: none;
+	}
+	.catty-music div p:nth-child(3) {
+		display: none;
+	}
+
+	.catty-music div:nth-child(2) {
+		font-size: 1.6em;
+		margin: 22px 0 0 20px;
+	}
+	.music-list li {
+		justify-content: space-between;
+	}
+
+	.music-list p:nth-child(2) {
+		display: none;
+	}
+	.music-list p:nth-child(4) {
+		display: none;
+	}
+
+	.billboard-img2 {
+		display: none;
+	}
+	.footer-controls li:nth-child(4) {
+		display: none;
+	}
+	.footer-controls li:nth-child(5) {
+		display: none;
+	}
 }
