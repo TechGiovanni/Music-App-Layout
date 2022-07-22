@@ -11,6 +11,7 @@ body {
 	font-family: 'Lato', sans-serif;
 	color: #222;
 	font-size: 0.9em;
+	overflow-x: hidden;
 }
 
 main {
@@ -19,7 +20,7 @@ main {
 }
 
 aside {
-	flex: 0 0 40px;
+	flex: 0 0 50px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -27,7 +28,7 @@ aside {
 	background-color: #f2f2f2;
 }
 aside i.fa {
-	font-size: 0.9em;
+	font-size: 1.2em;
 }
 
 .content {
@@ -38,6 +39,15 @@ aside i.fa {
 
 .billboard-img {
 	width: 20rem;
+}
+
+.catty-music {
+	flex: 1 0 auto;
+	display: flex;
+	flex-direction: column;
+	font-weight: 300;
+	color: #fff;
+	padding-left: 50px;
 }
 
 .music-head {
@@ -60,10 +70,30 @@ li {
 li p {
 	flex: 0 0 25%;
 }
+li span.catty-cloud {
+	border: 1px solid #000;
+	font-size: 0.6em;
+	padding: 3px;
+}
+
+li:nth-child(2n) {
+	background-color: #f2f2f2;
+}
+
+.billboard-img2 {
+	width: 100px;
+}
+
+.footer-display {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
 footer {
 	flex: 0 0 90px;
 	padding: 10px;
 	color: #fff;
-	background-color: rgba(61, 100, 158, .9);
+	background-color: rgba(61, 100, 158);
+	margin-top: auto;
 }
